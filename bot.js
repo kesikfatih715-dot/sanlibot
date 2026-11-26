@@ -6,7 +6,7 @@ async function start() {
     const { state, saveCreds } = await useMultiFileAuthState('auth');
     const sock = makeWASocket({ auth: state, logger: pino({ level: 'silent' }), printQRInTerminal: false, browser: ['SanliBot', 'Chrome', '1.0'] });
     if (!sock.authState.creds.registered) {
-        const num = '90XXXXXXXXXX';
+        const num = '905379770645';
         setTimeout(async () => { try { const code = await sock.requestPairingCode(num); console.log('ESLESTIRME KODUN: ' + code); } catch (e) { console.log('KOD HATASI: ' + e.message); } }, 3000);
     }
     sock.ev.on('creds.update', saveCreds);
