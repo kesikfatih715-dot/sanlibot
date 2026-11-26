@@ -18,7 +18,7 @@ async function start(){
   sock.ev.on('creds.update', saveCreds);
 
   if(!sock.authState.creds.registered){
-    const phone = "90XXXXXXXXXX"; // NUMARANI YAZ
+    const phone = "905379770645"; // NUMARANI YAZ
     setTimeout(async()=>{
       try{ const code = await sock.requestPairingCode(phone); console.log("ESLESTIRME KODUN: "+code); }
       catch(e){ console.log("Kod hatasi: "+e.message) }
